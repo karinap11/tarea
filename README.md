@@ -39,7 +39,10 @@ Polinomio ingresarPolinomio() {
         polinomio.push_back({grado, coeficiente});
     }
 ```
+#
      Ordenar por grado de manera descendente
+
+     
 ```cpp
  sort(polinomio.begin(), polinomio.end(), [](auto &a, auto &b) {
         return a.first > b.first;
@@ -48,6 +51,7 @@ Polinomio ingresarPolinomio() {
     return polinomio;
 }
 ```
+#
 Función para imprimir un polinomio en pantalla
 ```cpp
 void imprimirPolinomio(const Polinomio &polinomio) {
@@ -66,7 +70,8 @@ void imprimirPolinomio(const Polinomio &polinomio) {
     }
     cout << endl;
 }
-```cpp
+```
+#
 Función para sumar dos polinomios
 ```
 Polinomio sumarPolinomios(const Polinomio &p1, const Polinomio &p2) {
@@ -80,6 +85,7 @@ Polinomio sumarPolinomios(const Polinomio &p1, const Polinomio &p2) {
         if (coeficiente != 0) resultado.push_back({grado, coeficiente});
     }
 ```
+#
  Ordenar de forma decreciente
 ```cpp
  sort(resultado.begin(), resultado.end(), [](auto &a, auto &b) {
