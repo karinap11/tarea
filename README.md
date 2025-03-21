@@ -127,6 +127,7 @@ ordenar de forma decreciente
 }
 ```
 #funcion principal 
+```cpp
 int main() {
     cout << "Ingrese el primer polinomio:\n";
     Polinomio p1 = ingresarPolinomio();
@@ -152,7 +153,7 @@ int main() {
 
     return 0;
 }
-
+```
 
 
 
