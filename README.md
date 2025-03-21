@@ -14,6 +14,8 @@ Hacer una prueba con un par de polinomios cualesquiera.
 using namespace std;
 ```
 # variables
+Definimos Polinomio como un alias de vector<pair<int, double>>.
+Cada elemento representa un término (grado, coeficiente), por ejemplo, {{2, 3}, {0, -4}} para 3x² - 4.
 definimos las variables que usaremos
 ```cpp
 typedef vector<pair<int, double>> Polinomio;
@@ -94,5 +96,71 @@ Polinomio sumarPolinomios(const Polinomio &p1, const Polinomio &p2) {
 
     return resultado;
 ```
+#
+funcion para multiplicar los polinomios 
+```cpp
+Polinomio multiplicarPolinomios(const Polinomio &p1, const Polinomio &p2) {
+    map<int, double> coeficientes;
+
+    for (auto &t1 : p1) {
+        for (auto &t2 : p2) {
+            int nuevoGrado = t1.first + t2.first;
+            double nuevoCoef = t1.second * t2.second;
+            coeficientes[nuevoGrado] += nuevoCoef;
+        }
+    }
+
+    Polinomio resultado;
+    for (auto &[grado, coeficiente] : coeficientes) {
+        if (coeficiente != 0) resultado.push_back({grado, coeficiente});
+    }
+```
+#
+ordenar de forma decreciente
+
+```cpp
+   sort(resultado.begin(), resultado.end(), [](auto &a, auto &b) {
+        return a.first > b.first;
+    });
+
+    return resultado;
+}
+```
+#funcion principal 
+int main() {
+    cout << "Ingrese el primer polinomio:\n";
+    Polinomio p1 = ingresarPolinomio();
+
+    cout << "\nIngrese el segundo polinomio:\n";
+    Polinomio p2 = ingresarPolinomio();
+
+    cout << "\nPolinomio 1: ";
+    imprimirPolinomio(p1);
+
+    cout << "Polinomio 2: ";
+    imprimirPolinomio(p2);
+
+    // Suma de polinomios
+    Polinomio suma = sumarPolinomios(p1, p2);
+    cout << "\nSuma de polinomios: ";
+    imprimirPolinomio(suma);
+
+    // Producto de polinomios
+    Polinomio producto = multiplicarPolinomios(p1, p2);
+    cout << "\nProducto de polinomios: ";
+    imprimirPolinomio(producto);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
 
      
