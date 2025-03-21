@@ -6,7 +6,8 @@ Se deben programar los procedimientos o funciones que realicen cada operación, 
 Hacer una prueba con un par de polinomios cualesquiera.
 # se usan las sig paqueterias
 
-```#include <iostream>
+```cpp
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <map>
