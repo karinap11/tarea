@@ -40,7 +40,7 @@ Polinomio ingresarPolinomio() {
     }
 ```
 #
-     Ordenar por grado de manera descendente
+Ordenar por grado de manera descendente
 
      
 ```cpp
