@@ -11,8 +11,12 @@ Hacer una prueba con un par de polinomios cualesquiera.
 #include <vector>
 #include <algorithm>
 #include <map>
-using namespace std;```
+using namespace std;
+```
 # variables
 definimos las variables que usaremos
-```typedef vector<pair<int, double>> Polinomio;
+```cpp
+typedef vector<pair<int, double>> Polinomio;
+```
+
 #Función para ingresar un polinomio desde el teclado
