@@ -19,4 +19,11 @@ definimos las variables que usaremos
 typedef vector<pair<int, double>> Polinomio;
 ```
 
-#Función para ingresar un polinomio desde el teclado
+# Funciónes
+ Función para ingresar un polinomio desde el teclado
+```cpp
+Polinomio ingresarPolinomio() {
+    Polinomio polinomio;
+    int grado;
+    double coeficiente;
+```
